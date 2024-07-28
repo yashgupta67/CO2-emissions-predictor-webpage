@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CO2 Emission Prediction</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="CO2.js"></script>
+		<link rel="stylesheet" href="CO2.css" />
+	</head>
+	<body>
+		<div class="img"></div>
+		<form class="form">
+			<h2>Engine Size (L)</h2>
+			<input
+				class="engine-size"
+				type="text"
+				id="uiEngineSize"
+				class="floatLabel"
+				name="EngineSize"
+				value="2.0" />
+			<h2>Cylinders</h2>
+			<input
+				class="cylinders"
+				type="text"
+				id="uiCylinders"
+				class="floatLabel"
+				name="Cylinders"
+				value="4" />
+			<h2>Fuel Consumption (City) (L/100 km)</h2>
+			<input
+				class="fuel-consumption-city"
+				type="text"
+				id="uiFuelConsumptionCity"
+				class="floatLabel"
+				name="FuelConsumptionCity"
+				value="9.9" />
+			<h2>Fuel Consumption (Highway) (L/100 km)</h2>
+			<input
+				class="fuel-consumption-hwy"
+				type="text"
+				id="uiFuelConsumptionHwy"
+				class="floatLabel"
+				name="FuelConsumptionHwy"
+				value="6.7" />
+			<h2>Fuel Consumption (Combined MPG)</h2>
+			<input
+				class="fuel-consumption-comb-mpg"
+				type="text"
+				id="uiFuelConsumptionCombMPG"
+				class="floatLabel"
+				name="FuelConsumptionCombMPG"
+				value="33" />
+			<button
+				class="submit"
+				onclick="onClickedEstimateCO2Emissions()"
+				type="button">
+				Estimate CO2 Emissions
+			</button>
+			<div id="uiEstimatedCO2Emissions" class="result"><h2></h2></div>
+		</form>
+	</body>
+</html>
